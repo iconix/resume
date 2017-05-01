@@ -1,0 +1,4 @@
+*~
+latex/**/*.dvi
+latex/**/*.pdf
+latex/**/*.log
