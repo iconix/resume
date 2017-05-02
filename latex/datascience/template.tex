@@ -7,7 +7,7 @@
 % http://www.LaTeXTemplates.com
 %
 % Original author:
-% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by
 % Vel (vel@LaTeXTemplates.com)
 %
 % License:
@@ -22,20 +22,20 @@
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
 
 % Command for printing skill progress bars
-\newcommand\skills{ 
+\newcommand\skills{
 ~
 	\smartdiagram[bubble diagram]{
-        \textbf{Full Stack}\\\textbf{Dev},
-        \textbf{Relational/}\\\textbf{Document}\\\textbf{Databases},
+        \textbf{Web}\\\textbf{Development},
+        \textbf{Open Source}\\\textbf{Development},
         \textbf{~~~~~OOP~~~~~~},
-        \textbf{Mobile}\\\textbf{Dev},
-        \textbf{Machine}\\\textbf{Learning},
-        \textbf{Test}\\\textbf{~~Automation~~},
-        \textbf{Statistical}\\\textbf{Analysis}
+        \textbf{Data}\\\textbf{~~~~Science~~~~},
+        \textbf{Experiment-}\\\textbf{ation},
+        \textbf{~Full Stack~},
+        \textbf{Services}\\\textbf{~~~and APIs~~~}
     }
 }
 
-\programming{{C $\textbullet$ C++  $\textbullet$ R / 3}, {Java $\textbullet$ SQL $\textbullet$ \large \LaTeX / 3.5}, {HTML5 $\textbullet$ JS $\textbullet$ Python / 5}}
+\programming{{C $\textbullet$ C++ $\textbullet$ \large \LaTeX / 3}, {R $\textbullet$ Shell $\textbullet$ Java / 3.5}, {C\# $\textbullet$ Python $\textbullet$ Rails / 5}, {HTML5 $\textbullet$ TypeScript $\textbullet$ JS / 5.5}}
 
 %----------------------------------------------------------------------------------------
 %	 PERSONAL INFORMATION
@@ -43,15 +43,15 @@
 
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
-\cvname{HARSH GADGIL} % Your name
-\cvjobtitle{ Data Scientist } % Job
+\cvname{Nadja Rhodes} % Your name
+\cvjobtitle{ Software Engineer 2 } % Job
 % title/career
 
-\cvlinkedin{/in/hsgadgil}
-\cvgithub{opensorceror}
-\cvnumberphone{(647) 221 7999} % Phone number
-\cvsite{hgadgil.com} % Personal website
-\cvmail{harsh.gadgil@gmail.com} % Email address
+\cvlinkedin{/in/nadjarhodes}
+\cvgithub{iconix}
+\cvsite{708 6th Ave N, Unit 612, ~~~~~~~~~~~~Seattle, WA 98109} % TODO Personal website
+\cvnumberphone{(443) 643 8066} % Phone number
+\cvmail{narhodes1@gmail.com} % Email address
 
 %----------------------------------------------------------------------------------------
 
@@ -66,44 +66,14 @@
 
 \begin{twenty} % Environment for a list with descriptions
 	\twentyitem
-    	{2015 - 2017}
-        {}
-        {MSc., Computer Science}
-        {\href{http://www.uoguelph.ca/}{University of Guelph, Canada}}
-        {}
-        {GPA: 3.7/4.0, First Class}
-	\twentyitem
     	{2009 - 2013}
 		{}
-        {BEng., Computer Engineering}
-        {\href{http://www.unipune.ac.in/}{University of Pune, India}}
+        {B.S. Computer Science}
+        {Stanford, CA}
         {}
-        {First Class with Distinction}
+        {\href{http://cs.stanford.edu/}{Stanford University, School of Engineering}}
 	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
 \end{twenty}
-
-\section{Research}
-\begin{twenty}
-	\twentyitem
-    	{2015 - 2017}
-		{}
-        {MSc. Candidate, Graduate Research Assistant}
-        {\href{http://www.uoguelph.ca/}{University of Guelph}}
-        {}
-        {
-       	\textbf{Thesis}: Data Integration from Multiple Historical Sources to Study Canadian Casualties of WWI
-        {\begin{itemize}
-        \item Proposed a scalable stepwise deterministic method to reliably integrate datasets without labeled data. The method performs comparably with a method that incorporates a Support Vector Machine
-        \item Constructed a rich longitudinal dataset to enable comphrehensive time-series analyses about WWI Canadian society and military
-        \item \textbf{Tools}: R, Python, scikit-learn, BeautifulSoup, pandas, matplotlib
-%         \item A paper describing the method is accepted for publication in proceedings of the IEEE International Conference of Data Mining 2016
-% 		\item \textcolor{mainblue}{Related publication:} L. Antonie, H. Gadgil, G. Grewal, and K. Inwood, “Historical Data Integration - A Study of WWI Canadian Soldiers,” in 2016 IEEE 16th International Conference on Data Mining Workshops (ICDMW), pp. 186-193, IEEE, 2016.
-		\end{itemize}}
-        }
-\end{twenty}
-
-\section{Publications}
-L. Antonie, H. Gadgil, G. Grewal, and K. Inwood, “Historical Data Integration - A Study of WWI Canadian Soldiers,” in 2016 IEEE 16th International Conference on Data Mining Workshops (ICDMW), pp. 186-193, IEEE, 2016.
 
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE
@@ -113,55 +83,84 @@ L. Antonie, H. Gadgil, G. Grewal, and K. Inwood, “Historical Data Integration 
 
 \begin{twenty} % Environment for a list with descriptions
 \twentyitem
-    	{April 2017 -}
+    	{Mar 2016 -}
 		{Present}
-        {Data Engineer}
-        {\href{http://www.bell.ca/}{Bell}}
+        {Software Engineer 2}
+        {\href{http://www.onenote.com/}{Microsoft, OneNote Services}}
         {}
-        {}
-        \\
+        {
+        {\begin{itemize}
+        \item In a team of 5, rebuilt and open sourced on GitHub the OneNote Web Clipper, a multi-browser extension for pulling web content into OneNote notebooks, with a modern React-like library.
+        \item Primary architect of telemetry (data collection) infrastructure for the OneNote Web Clipper. This framework allowed us to be highly data driven about where to invest next in the product.
+    \end{itemize}}
+        }
+    \\
 	\twentyitem
-    	{Sep 2015 -}
-		{May 2016}
-        {Co-founder \& Full Stack Developer}
-        {\href{http://www.localxchange.ca/}{LocalXChange Inc.}}
+    	{Sep 2013 -}
+		{Mar 2016}
+        {Software Engineer}
+        {\href{http://www.onenote.com/}{Microsoft, OneNote Services}}
         {}
         {
         {\begin{itemize}
-        \item In a team of 2, raised \$8,000 in funding from The Hub incubator at the University of Guelph, to develop a prototype hyperlocal content platform, aimed at delivering local news and events from community organizations to local users in realtime (i.e., hyperlocal)
-        \item In a team of 3, built hybrid mobile \& web apps with Ionic, Angular.js and MongoDB, surpassing 1,000 users within a month since launch
-        \item Met with city officials, including the Mayor of Guelph, and university officials to discuss marketing \& business strategies for the platform 
+        \item Primary developer for V1 of https://www.onenote.com/notebooks, the main entry point for 4M monthly active users to find and access their OneNote content online.
+        \item Engaged in exploratory analysis using the beta of CloudML Studio to find leading indicators of long-term, engaged users. Despite a lack of formal training and experience at the time, these efforts led to funding features (email campaigns, in-app notifications) that now enjoy widespread popularity throughout the org.
+        \item Delivered first-ever user communication campaign by OneNote in the form of welcome emails; automated the process of finding new users to email through software agents and notifications pipeline.
+        \item Coded up and analyzed the results of several A/B tests on OneNote.com before we began hiring data scientists for such analysis. Gained valuable experience in experiment design, analysis, and reporting.
     \end{itemize}}
         }
-    \\   
-    \twentyitem
-   		{Sep 2015 -}
-		{Dec 2016}
-        {Graduate Teaching Assistant}
-        {\href{http://www.uoguelph.ca}{University of Guelph}}
-        {}
-        {
-        {\begin{itemize}
-        \item TA for CIS*2430 (OOP), CIS*4150 (Software Reliability \& Testing) and CIS*3530 (Database Systems \& Concepts) courses
-    \end{itemize}}
-        }
-     \\
-     \twentyitem
-   		{Dec 2013 -}
-		{Apr 2015}
-        {Test Automation Engineer}
-        {\href{http://www.synechron.com/}{Synechron}}
-        {}
-        {
-        \begin{itemize}
-        \item Developed a \textit{Keyword Driven} and \textit{Behavior Driven} test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/crm.aspx}{Microsoft Dynamics CRM}. Wrote an efficient recursive function to search multi-level frames, reducing development time by approximately two weeks. Won SPOT award {\includegraphics[scale=0.05]{img/trophy.png}}
-        
-        \textit{My work opened up a new position in the organization, enabling it to earn additional revenue of \$3,500 per month (estimated)}
-        \item Demonstrated by proof of concept that rewriting a test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/erp-ax-overview.aspx}{Microsoft Dynamics AX}, using an open source library (White) instead of a proprietary one (Coded UI), would enable the team to save \$4,000 annually by downgrading the prevailing edition of Microsoft Visual Studio from \textit{Premium} to \textit{Professional}
-    \end{itemize}
-    	}
-        
+
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
 
-\end{document} 
+%----------------------------------------------------------------------------------------
+%	 OTHER
+%----------------------------------------------------------------------------------------
+
+\section{Self-Study}
+\begin{itemize} \itemsep -2pt %reduce space between items
+        \item Machine Learning by Stanford University/Andrew Ng (Coursera) - Completed 2014
+       	\item R Programming by Johns Hopkins University (Coursera) - Completed 2016
+        \item The Data Scientist's Toolbox by Johns Hopkins University (Coursera) - Completed 2016
+\end{itemize}
+
+
+\section{Internships}
+\begin{twenty}
+	\twentyitem
+    	{Summer}
+        {2012}
+        {Trainee}
+        {\href{http://www.kecl.ntt.co.jp/rps/index.html}{NTT Communication Science Laboratories}}
+        {}
+        {\begin{itemize} \itemsep -2pt %reduce space between items
+        \item Linguistic Intelligence Research Group
+       	\item Implemented additional features to standard sequential pattern mining algorithm (PrefixSpan), introduced to distributed computing via Hadoop.
+        \end{itemize}}
+    \\
+    \twentyitem
+    	{Summer}
+        {2011}
+        {Intern (BOLD Engineering Practicum)}
+        {\href{https://careers.google.com/students/}{Google, Inc.}}
+        {}
+        {\begin{itemize}  \itemsep -2pt %reduce space between items
+        \item Google AdWords Display Network
+        \item Developed and released client-motivated UI feature for Contextual Targeting Tool,
+            used to build advertising campaigns.
+        \end{itemize}}
+    \\
+    \twentyitem
+    	{Summer}
+        {2010}
+        {Research Assistant, Sociology Department}
+        {\href{https://careers.google.com/students/}{Stanford University}}
+        {}
+        {\begin{itemize}  \itemsep -2pt %reduce space between items
+        \item Supervised by \href{https://www.chicagobooth.edu/faculty/directory/s/amanda-j-sharkey}{Dr. Amanda J. Sharkey}
+        \item Optimized manual data mining project by developing Python code to automate
+            LexisNexis Academic news database searches.
+        \end{itemize} }
+\end{twenty}
+
+\end{document}

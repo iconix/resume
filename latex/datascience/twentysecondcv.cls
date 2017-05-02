@@ -152,7 +152,7 @@
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
 % Command for printing skill progress bars
-\newcommand\programming[1]{ 
+\newcommand\programming[1]{
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
         	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
@@ -179,59 +179,59 @@
   \begin{textblock}{6}(0.5, 0.2)
 
     %------------------------------------------------
-    
+
         \vspace{4mm}
     {\Huge\color{pblue}\cvname}
-    
+
     \vspace{2mm}
 
     %------------------------------------------------
-    
+
     {\Large\color{black!80}\cvjobtitle}
 
     %------------------------------------------------
-    
+
     \vspace{4mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
       		{$
               \begin{array}{l}
-              \hspace{4mm} \Huge \textnormal{\faMobile} 
+              \hspace{4mm} \Huge \textnormal{\faMobile}
               \end{array}
-              $} 
+              $}
             & \cvnumberphone\\}
-            
+
       \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
             {$
               \begin{array}{l}
               \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
               \end{array}
-              $} 
+              $}
             & \href{http://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
               \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
               \end{array}
-              $} 
+              $}
             & \href{mailto:\cvmail}{\cvmail} \\}
-      
+
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
               $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
-            }  
+            }
         \ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
               \hspace{3mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
-            }   
-            
+            }
+
     \end{tabular}
 
     %------------------------------------------------
@@ -241,29 +241,30 @@
     {\large \textbf{Overview}}
 
 	\skills
-        
+
         %------------------------------------------------
-        
+
         \vspace{3mm}
-%         \profilesection{Programming}{1.4cm} 
+%         \profilesection{Programming}{1.4cm}
 	 {\large \textbf{Programming}}
 %         {$
 %               \begin{array}{l}
 %               \hspace{-2mm}{\includegraphics[scale=0.45]{img/languages_muted.png}}
 %               \end{array}
-%         $}   
+%         $}
 
+      % TODO move this to .tex
 		 \programming
-         
+
         \vspace{4mm}
-        \profilesection{Projects}{3cm} 
-        
-        \textbf{DecAR} - An augmented reality interior decoration app for Android \\
-        \textbf{CIS*6320} - An implementation of the Bicubic interpolation algorithm in C++
-        \textbf{CIS*6650} - A comparative statistical study of SVM kernels, and number of hidden layers in ANN, on 5 UCI datasets
-        \textbf{CIS*6660} - A data linkage project to integrate Canada's WWI casualties and 1901 Canadian census using an SVM
-        \textbf{CIS*6650} - A statistical study of spurious correlations, such as correlating beer production with election outcome
-      
+        \profilesection{Conferences}{2cm}
+
+        \textbf{Women in Data Science Conference} - February 3, 2017 (online) \\
+        \textbf{OneAnalyst Conference @ Microsoft} - January 20, 2017 \\
+        \textbf{Grace Hopper Celebration of Women in Computing} - October 19-21, 2016 \\
+        \textbf{Practice of Machine Learning Conference @ Microsoft} - March 6-7, 2014 \\
+        \textbf{Y Combinator's Female Founders Conference} - March 1, 2014
+
   \end{textblock}
 }
 
@@ -317,7 +318,7 @@
 
 % \newcommand{\twentyitem}[5]{%
 % 	#1&\parbox[t]{0.83\textwidth}{%
-% 		\textbf{#2}% 
+% 		\textbf{#2}%
 % 		\hfill%
 % 		{\footnotesize#3}\\%
 %         \ifblank{#4}{}{#4 \\}
@@ -327,7 +328,7 @@
 
 \newcommand{\twentyitem}[6]{%
 	#1&\parbox[t]{0.83\textwidth}{%
-		\textbf{#3}% 
+		\textbf{#3}%
 		\hfill%
 		{\footnotesize#4}%
         }\\%
