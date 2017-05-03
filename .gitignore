@@ -2,3 +2,8 @@
 latex/**/*.dvi
 latex/**/*.pdf
 latex/**/*.log
+latex/**/*.aux
+latex/**/*.out
+latex/**/*.synctex.gz
+latex/**/*.fdb_latexmk
+latex/**/*.fls
