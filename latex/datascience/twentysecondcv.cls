@@ -258,10 +258,10 @@
         \vspace{4mm}
         \profilesection{Conferences}{2cm}
 
+        \textbf{MLADS Conference @ Microsoft} - June 8-9, 2017 \\ % MLADS: Machine Learning, Analytics & Data Science
         \textbf{Women in Data Science Conference} - February 3, 2017 (online) \\
         \textbf{OneAnalyst Conference @ Microsoft} - January 20, 2017 \\
         \textbf{Grace Hopper Celebration of Women in Computing} - October 19-21, 2016 \\
-        \textbf{Practice of Machine Learning Conference @ Microsoft} - March 6-7, 2014 \\
         \textbf{Y Combinator's Female Founders Conference} - March 1, 2014
 
   \end{textblock}

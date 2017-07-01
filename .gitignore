@@ -5,5 +5,7 @@ latex/**/*.log
 latex/**/*.aux
 latex/**/*.out
 latex/**/*.synctex.gz
+latex/**/*.synctex.gz(busy)
 latex/**/*.fdb_latexmk
 latex/**/*.fls
+!latex/**/resume.pdf
