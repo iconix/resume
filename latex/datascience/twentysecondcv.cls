@@ -34,7 +34,7 @@
     pdfauthor={},
     pdfsubject={},
     pdfkeywords={},
-    colorlinks=false,           % no lik border color
+    colorlinks=false,           % no link border color
     allbordercolors=white       % white border color for all
 }
 
@@ -207,7 +207,7 @@
               \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
               \end{array}
               $}
-            & \href{http://\cvsite}{\cvsite} \\}
+            & \href{https://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
@@ -239,30 +239,24 @@
 %     \vspace{1mm}
     {\large \textbf{Overview}}
 
-	\skills
+	  \skills
 
         %------------------------------------------------
 
-        \vspace{3mm}
+    \vspace{3mm}
 %         \profilesection{Programming}{1.4cm}
-	 {\large \textbf{Programming}}
+	  {\large \textbf{Programming}}
 %         {$
 %               \begin{array}{l}
 %               \hspace{-2mm}{\includegraphics[scale=0.45]{img/languages_muted.png}}
 %               \end{array}
 %         $}
 
-      % TODO move this to .tex
-		 \programming
+    \programming
 
-        \vspace{4mm}
-        \profilesection{Conferences}{2cm}
+    \vspace{4mm}
 
-        \textbf{MLADS Conference @ Microsoft} - June 8-9, 2017 \\ % MLADS: Machine Learning, Analytics & Data Science
-        \textbf{Women in Data Science Conference} - February 3, 2017 (online) \\
-        \textbf{OneAnalyst Conference @ Microsoft} - January 20, 2017 \\
-        \textbf{Grace Hopper Celebration of Women in Computing} - October 19-21, 2016 \\
-        \textbf{Y Combinator's Female Founders Conference} - March 1, 2014
+    \projects
 
   \end{textblock}
 }
