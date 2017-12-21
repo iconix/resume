@@ -179,7 +179,7 @@
 
     %------------------------------------------------
 
-        \vspace{4mm}
+    \vspace{3mm}
     {\Huge\color{pblue}\cvname}
 
     \vspace{2mm}
@@ -190,7 +190,7 @@
 
     %------------------------------------------------
 
-    \vspace{4mm}
+    \vspace{2mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
@@ -234,7 +234,7 @@
     \end{tabular}
 
     %------------------------------------------------
-    \vspace{4mm}
+    \vspace{1mm}
     \profilesection{Skills}{4cm}
 %     \vspace{1mm}
     {\large \textbf{Overview}}
@@ -243,7 +243,7 @@
 
         %------------------------------------------------
 
-    \vspace{3mm}
+    \vspace{1mm}
 %         \profilesection{Programming}{1.4cm}
 	  {\large \textbf{Programming}}
 %         {$
