@@ -28,14 +28,16 @@
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*}
 
-\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{hyperref}
 \hypersetup{
     pdftitle={},
     pdfauthor={},
     pdfsubject={},
     pdfkeywords={},
-    colorlinks=false,           % no link border color
-    allbordercolors=white       % white border color for all
+    colorlinks=false, % hyperlinks will be black
+    urlbordercolor=black, % hyperlink borders will be black
+    pdfborderstyle={/S/U/W 0.5} % border style will be underline of width 0.5pt
+    %pdfborderstyle={/S/D/D[1 1]/W 0.5}
 }
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
