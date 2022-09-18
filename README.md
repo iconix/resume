@@ -1,9 +1,9 @@
 # resume
 
 To re-build on a Windows PC, I...
-- install [MiKTeX](https://miktex.org/download) to use xelatex
+- install [MiKTeX](https://miktex.org/download) to use `xelatex`
     - Preferred paper: Letter
-- install the [LaTeX Workshop extension on VSCode](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+- install the [LaTeX Workshop extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) on VSCode
     - LaTeX Workshop Settings:
         ```json
         [
