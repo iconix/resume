@@ -1,0 +1,155 @@
+% Modern Resume Template
+% Author: Created for Nadja Rhodes
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+% Page dimensions
+\geometry{letterpaper, margin=0.75in}
+
+% Colors
+\definecolor{primarycolor}{RGB}{0, 84, 132} % Deep blue
+\definecolor{secondarycolor}{RGB}{70, 130, 180} % Steel blue
+\definecolor{accentcolor}{RGB}{220, 220, 220} % Light gray
+
+% Format section headings
+\titleformat{\section}
+  {\Large\bfseries\color{primarycolor}}
+  {}{0em}
+  {}
+  [\titlerule]
+
+\titlespacing{\section}{0pt}{12pt}{6pt}
+
+% Contact info command
+\newcommand{\contactinfo}[5]{
+  \begin{center}
+    {\huge\textbf{#1}}\\[0.2em]
+    {\large\textit{#2}}\\[0.5em]
+    \begin{tabular}{ccccc}
+      \faEnvelope\, \href{mailto:#3}{#3} &
+      \faGithub\, \href{https://github.com/#4}{#4} &
+      \faLinkedin\, \href{https://linkedin.com/in/#5}{#5} &
+      \faGlobe\, \href{https://#4.github.io}{#4.github.io}
+    \end{tabular}
+  \end{center}
+}
+
+% Custom command for experience entries
+\newcommand{\experienceentry}[5]{
+  \noindent\textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}\\[-8pt]
+  #5
+}
+
+% Custom command for education entries
+\newcommand{\educationentry}[4]{
+  \noindent\textbf{#1} \hfill \textbf{#2}\\
+  \textit{#3} \hfill \textit{#4}
+}
+
+% Custom command for sabbatical entries
+\newcommand{\sabbaticalentry}[3]{
+  \noindent\textbf{#1} \hfill \textbf{#2}\\
+  #3
+}
+
+% Custom command for condensed internship entries
+\newcommand{\pastexperience}[1]{
+  \begin{itemize}[leftmargin=*, nosep]
+    #1
+  \end{itemize}
+}
+
+\begin{document}
+
+% Header
+\contactinfo{Nadja Rhodes}{Software (Machine Learning) Engineer}{narhodes1+res@gmail.com}{iconix}{nadjarhodes}
+
+% Summary
+% \section{Summary}
+% Experienced Machine Learning Engineer with expertise in NLP, deep learning, and conversational AI. Proven track record in developing large-scale ML systems and infrastructure for Fortune 500 clients. Strong background in software engineering with a focus on technical leadership and full-stack development.
+
+% Experience
+\section{Work Experience}
+\experienceentry{ASAPP}{Jan 2019 - Jul 2024}{New York, NY}{}{
+\begin{itemize}[leftmargin=*, nosep]
+  \item \textbf{Staff Machine Learning Engineer} (Nov 2021 - Jul 2024)
+  \begin{itemize}[leftmargin=*, nosep]
+    \item Led 3-person ML engineering team in cross-collaboration with a \~{}dozen research scientists and product engineers to productionize a mission-critical prototype for an LLM-based customer support agent that automates complex interactions in call centers. Shipped system to a Fortune 100 airline company.
+    \item Led 4-person team to develop and enhance an internal machine learning training framework and standardize all (\~{}20) company models on it. The framework was a collection of Python packages that enabled: (1) defining model training as a flexible, config-based pipeline, (2) acquiring remote compute from AWS or on-prem/colocation clusters with seamless local code syncing and remote execution, (3) integration with internal libraries for model and dataset management, and (4) connections to external tools for logging, metrics tracking, Airflow integration, and optional PyTorch Lightning execution.
+    \item Architected and implemented multi-node distributed training capability on colocation servers, using Kubernetes and Ray.io.
+    \item Contributed to strategic improvements in accessing and managing training datasets by implementing an indexing service, resulting in a 10x speedup (minutes to seconds).
+    \item Proactively innovated on internal bot development as a passion project, providing e.g., thread summarization, service and library ownership info, and trend detection on internal Slack communications.
+  \end{itemize}
+  \item \textbf{Lead Machine Learning Engineer} (Jan 2019 - Nov 2021)
+  \begin{itemize}[leftmargin=*, nosep]
+    \item Architected and implemented a centralized routing layer between applications and ML services, successfully migrating critical natural language understanding components from a legacy conversational AI system while orchestrating parallel calls to multiple ML models and unifying their responses with sophisticated entity handling and intent classification logic. This design became a prototype for future edge services within ML engineering.
+    \item Led the end-to-end development and launch of a named entity recognition service and agent-assist entity highlighting features, significantly enhancing a voice-enabled agent desktop for the company's first voice client.
+    \item Spearheaded development and deployment of domain-specific entity recognition, taking full ownership from technical planning to full rollout, resulting in an 11\% increase in entity card hover rates and improved agent experience for customer service agents.
+    \item Significantly improved the efficiency and reliability of key ML processes, including leading the internal client-requested model updates process, overhauling documentation, and providing critical support for the conversational AI platform and machine learning model training pipelines.
+  \end{itemize}
+\end{itemize}
+}
+
+\vspace{0.3em}
+
+\experienceentry{Microsoft}{Sep 2013 - Sep 2018}{Redmond, WA}{}{
+\begin{itemize}[leftmargin=*, nosep]
+  \item \textbf{Software Engineer II} (Apr 2016 - Sep 2018)
+  \begin{itemize}[leftmargin=*, nosep]
+    \item Rebuilt and open-sourced the OneNote Web Clipper on a modern, React-like library
+    \item Led development of JavaScript unit test infrastructure and drove client-side telemetry implementation for Web Clipper, successfully influencing internal partner team to expedite critical SDK functionality
+    \item Led the technical effort to develop and launch a ratings prompt for Web Clipper v3, resulting in a substantial increase in the Chrome Web Store rating from 2.73 to 4.44 average stars and gathering valuable user feedback that guided future initiatives
+    \item Spearheaded the development and implementation plan for exporting and re-importing all OneNote customer content to meet GDPR requirements, a critical initiative requiring extensive cross-team collaboration
+    \item Pioneered machine learning efforts within a 3-person incubation team by developing a functional task detection prototype that explored various technologies and provided valuable insights into productized intelligence for OneNote
+  \end{itemize}
+  \item \textbf{Software Engineer} (Sep 2013 - Apr 2016)
+  \begin{itemize}[leftmargin=*, nosep]
+    \item Led development and public launch of OneNote.com/notebooks, the main entry point for 4M monthly active users, which averaged 58K daily visits with a 97\% success rate and included the first public endpoint for OneNote Web Services's new storage layer
+    \item Improved the reliability and efficiency of OneNote welcome emails, a key user engagement feature, by enhancing backend infrastructure
+    \item Produced data-driven insights on site experimentation efforts that informed critical product improvements
+  \end{itemize}
+\end{itemize}
+}
+
+% Education
+\section{Education \& Scholarship}
+\experienceentry{Deep Learning Scholar}{Summer 2018}{OpenAI}{San Francisco, CA}{
+\begin{itemize}[leftmargin=*, nosep]
+  \item Granted a scholarship to study deep learning full time under mentorship by Dr. Natasha Jaques
+  \item Focused on techniques in language modeling and generative text for natural language processing (NLP)
+  \item Developed and open sourced deephypebot, a deep generative language model trained on past human music writing
+  \item Deployed model outputs to a Twitter bot that would find ongoing music discussion and generate new music commentary
+\end{itemize}
+}
+
+\vspace{0.3em}
+
+\educationentry{B.S. Computer Science}{2009 - 2013}{Stanford University, School of Engineering}{Stanford, CA}
+
+% Career Development Section
+\section{Career Transitions}
+\begin{itemize}[leftmargin=*, nosep]
+  \item \textbf{Recurse Center} (Nov 2024 - Feb 2025): Self-directed programming retreat in a peer-learning environment. Focused on web development, creative coding, and generative AI.
+  \item \textbf{Career Break (Family)} (Jul 2024 - Nov 2024): Dedicated time for parenting responsibilities
+  \item \textbf{Internships}: NTT Communication Science Labs (2012), Google BOLD Engineering Practicum (2011), Stanford Research (2010)
+\end{itemize}
+
+% Industry Engagement
+\section{Industry Engagement}
+\begin{itemize}[leftmargin=*, nosep]
+  \item \textbf{OpenAI Scholars Demo Day} (2018): Presented deephypebot, a deep generative language model trained on past human music writing
+  \item \textbf{Conferences}: RenderATL (2023), Association for Computational Linguistics (ACL) (2019), National Society of Black Engineers (NSBE) Annual Convention (2018), Grace Hopper Celebration of Women in Computing (GHC) (2016), Y Combinator's Female Founders Conference (2014)
+\end{itemize}
+
+\end{document}
