@@ -8,4 +8,4 @@ latex/**/*.synctex.gz
 latex/**/*.synctex.gz(busy)
 latex/**/*.fdb_latexmk
 latex/**/*.fls
-!latex/**/resume.pdf
+!latex/**/*resume.pdf
