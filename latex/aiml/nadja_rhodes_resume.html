@@ -5,129 +5,226 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nadja Rhodes - Resume</title>
     <style>
-        /* Print-specific styles */
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.3;
+            font-size: 9.5pt;
+            /* Set fixed dimensions to match PDF paper size */
+            width: 8.5in;
+            margin: 0 auto;
+        }
+
+        /* Container with PDF-like fixed dimensions */
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.35in;
+            position: relative;
+            border-left: 5px solid #10616E;
+            min-height: 11in;
+        }
+
+        /* Compact header */
+        .header {
+            text-align: center;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .header h1 {
+            margin: 0 0 2px 0;
+            color: #10616E;
+            font-size: 18pt;
+            letter-spacing: -0.5px;
+        }
+
+        .header h2 {
+            margin: 0 0 6px 0;
+            font-weight: normal;
+            font-style: italic;
+            font-size: 10pt;
+            color: #555;
+        }
+
+        /* Compact contact info */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+            font-size: 8pt;
+        }
+
+        .contact-info a {
+            color: #2B8396;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        /* Section styles */
+        .section {
+            margin-bottom: 8px;
+            padding-left: 2px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            color: #10616E;
+            border-bottom: 1px solid #10616E;
+            padding-bottom: 2px;
+            margin: 0 0 4px 0;
+        }
+
+        /* Two-column layout for career and skills */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        /* Experience entry styles */
+        .experience {
+            margin-bottom: 8px;
+            padding: 4px 5px;
+            border-left: 2px solid #eaeaea;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1px;
+            flex-wrap: nowrap;
+        }
+
+        .experience-subheader {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            margin-bottom: 2px;
+            font-size: 8.5pt;
+            color: #555;
+            flex-wrap: nowrap;
+        }
+
+        /* List styles */
+        ul {
+            padding-left: 12px;
+            margin: 1px 0;
+        }
+
+        ul ul {
+            margin-top: 1px;
+        }
+
+        li {
+            margin-bottom: 1px;
+            position: relative;
+            line-height: 1.2;
+        }
+
+        i {
+            margin-right: 3px;
+            font-size: 8pt;
+        }
+
+        /* Custom bullet styling */
+        ul li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 4px;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #10616E;
+            font-weight: bold;
+            position: absolute;
+            left: -10px;
+            font-size: 9pt;
+        }
+
+        ul li ul li::before {
+            content: "◦";
+            color: #267D92;
+            font-size: 8pt;
+        }
+
+        ul li ul li {
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        /* Links always non-underlined */
+        a {
+            text-decoration: none;
+            color: #2B8396;
+        }
+
+        /* Add space between sections for better readability */
+        .section + .section {
+            margin-top: 8px;
+        }
+
+        /* Media query to handle screen viewing */
+        @media screen {
+            body {
+                background-color: #f5f5f5;
+                padding: 20px 0;
+            }
+
+            .container {
+                background-color: white;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+                width: 8.5in;
+                margin: 0 auto;
+            }
+        }
+
+        /* Print styles to ensure PDF generation looks correct */
         @media print {
             body {
                 margin: 0;
                 padding: 0;
                 width: 8.5in;
                 height: 11in;
-                font-size: 10pt;
+                background-color: white;
             }
+
             .container {
-                padding: 0.6in;
+                padding: 0.35in;
                 max-width: none;
                 width: 100%;
                 box-sizing: border-box;
                 height: 100%;
+                box-shadow: none;
             }
-            a {
-                text-decoration: none;
-                color: #4682b4;
-            }
+
             a[href]:after {
                 content: none !important;
             }
-        }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #333;
-            line-height: 1.4;
-            font-size: 10pt;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .header h1 {
-            margin: 0 0 3px 0;
-            color: #054884;
-            font-size: 17pt;
-        }
-        .header h2 {
-            margin: 0 0 6px 0;
-            font-weight: normal;
-            font-style: italic;
-            font-size: 11pt;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            font-size: 8.5pt;
-        }
-        .contact-info a {
-            color: #4682b4;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .section {
-            margin-bottom: 9px;
-        }
-        .section-title {
-            font-size: 13pt;
-            color: #054884;
-            border-bottom: 1px solid #054884;
-            padding-bottom: 2px;
-            margin: 0 0 4px 0;
-        }
-        .experience {
-            margin-bottom: 6px;
-        }
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 1px;
-        }
-        .experience-subheader {
-            display: flex;
-            justify-content: space-between;
-            font-style: italic;
-            margin-bottom: 2px;
-            font-size: 9pt;
-        }
-        .position {
-            font-weight: bold;
-            margin-bottom: 3px;
-        }
-        ul {
-            padding-left: 16px;
-            margin: 2px 0;
-        }
-        ul ul {
-            margin-top: 1px;
-        }
-        li {
-            margin-bottom: 2px;
-        }
-        i {
-            margin-right: 3px;
-        }
-        /* Compact nested lists */
-        ul li ul li {
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
-        /* Make bullet points more compact */
-        ul li {
-            padding-left: 0;
+            /* Ensure page breaks don't occur within elements */
+            .experience {
+                page-break-inside: avoid;
+            }
         }
     </style>
+    <!-- Font Awesome for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <!-- Print-specific settings -->
     <style media="print">
@@ -143,10 +240,10 @@
             <h1>Nadja Rhodes</h1>
             <h2>Software {Machine Learning} Engineer</h2>
             <div class="contact-info">
-                <a href="mailto:narhodes1+res@gmail.com"><i class="fas fa-envelope"></i>&nbsp;narhodes1+res@gmail.com</a>
-                <a href="https://github.com/iconix"><i class="fab fa-github"></i>&nbsp;iconix</a>
-                <a href="https://linkedin.com/in/nadjarhodes"><i class="fab fa-linkedin"></i>&nbsp;nadjarhodes</a>
-                <a href="https://iconix.github.io"><i class="fas fa-globe"></i>&nbsp;iconix.github.io</a>
+                <a href="mailto:narhodes1+res@gmail.com"><i class="fas fa-envelope" aria-hidden="true" alt="Email"></i>&nbsp;narhodes1+res@gmail.com</a>
+                <a href="https://github.com/iconix"><i class="fab fa-github" aria-hidden="true" alt="GitHub"></i>&nbsp;iconix</a>
+                <a href="https://linkedin.com/in/nadjarhodes"><i class="fab fa-linkedin" aria-hidden="true" alt="LinkedIn"></i>&nbsp;nadjarhodes</a>
+                <a href="https://iconix.github.io"><i class="fas fa-globe" aria-hidden="true" alt="Website"></i>&nbsp;iconix.github.io</a>
             </div>
         </div>
 
@@ -166,8 +263,8 @@
                 <ul>
                     <li><strong>Staff Machine Learning Engineer</strong> (Nov 2021 &ndash; Jul 2024)
                         <ul>
-                            <li>Led ML engineering team of 3, with collaboration from a ~dozen research scientists and product engineers, to productionize new LLM-based customer support agent for a Fortune 100 airline client, enabling automation complex call center interactions.</li>
-                            <li>Led team of 4 developing company-wide ML training framework used by all (~20) models, standardizing pipelines, remote compute access, dataset and model management, and external tool integration.</li>
+                            <li>Led ML engineering team of three, with collaboration from a ~dozen research scientists and product engineers, to productionize new LLM-based customer support agent for a Fortune 100 airline client, enabling automating complex call center interactions.</li>
+                            <li>Led team of four developing company-wide ML training framework used by all (~20) models, standardizing pipelines, remote compute access, dataset and model management, and external tool integration.</li>
                             <li>Architected multi-node distributed training on colocated servers using Kubernetes and Ray.io; collaborated on implementing training dataset indexing service for 10x faster dataset access (minutes to seconds).</li>
                             <li>Proactively built internal Slack bot as passion project, providing thread summarization, ownership info, and trend detection to improve team communications.</li>
                         </ul>
@@ -194,14 +291,14 @@
                 <ul>
                     <li><strong>Software Engineer II</strong> (Apr 2016 &ndash; Sep 2018)
                         <ul>
-                            <li>Rebuilt and open-sourced <a href="https://github.com/OneNoteDev/WebClipper">OneNote Web Clipper</a> on modern, React-like framework; led JS testing infrastructure and client-side telemetry implementation.</li>
+                            <li>Rebuilt and open-sourced <a href="https://github.com/OneNoteDev/WebClipper">OneNote Web Clipper</a> on a modern, React-like framework; led JS testing infrastructure and client-side telemetry implementation.</li>
                             <li>Led technical development of Web Clipper ratings prompt, increasing Chrome Web Store rating from 2.73 to 4.44 stars.</li>
-                            <li>Spearheaded GDPR compliance plan for exporting OneNote content; pioneered and patented ML efforts in incubation team of 3, developing task detection prototype.</li>
+                            <li>Spearheaded GDPR compliance plan for exporting OneNote content; pioneered and patented ML efforts in an incubation team of three, developing a task detection prototype.</li>
                         </ul>
                     </li>
                     <li><strong>Software Engineer</strong> (Sep 2013 &ndash; Apr 2016)
                         <ul>
-                            <li>Led development and public launch of <a href="https://www.onenote.com/notebooks">OneNote.com/notebooks</a> entry point (4M MAU, 58K daily visits), including first public endpoint for new storage layer.</li>
+                            <li>Led development and public launch of <a href="https://www.onenote.com/notebooks">OneNote.com/notebooks</a> entry point (4M MAU, 58K daily visits).</li>
                             <li>Enhanced backend for OneNote welcome emails and produced data-driven insights on site experimentation.</li>
                         </ul>
                     </li>
@@ -239,14 +336,40 @@
             </div>
         </div>
 
-        <div class="section">
-            <h2 class="section-title">Career Transitions & Industry Engagement</h2>
-            <ul>
-                <li><strong>Recurse Center</strong> (Nov 2024 &ndash; Feb 2025): Self-directed <a href="https://www.recurse.com/">programming retreat</a> in a peer-learning environment. Focused on web development, creative coding, and generative AI.</li>
-                <li><strong>Family Sabbatical</strong> (Jul &ndash; Nov 2024): Dedicated time for parenting and early childhood development.</li>
-                <li><strong>Internships</strong>: <a href="https://www.rd.ntt/e/cs/">NTT Communication Science Labs</a> (2012), Google BOLD (2011), Stanford Research (2010).</li>
-                <li><strong>Presentations</strong>: OpenAI Scholars Demo Day (2018, <a href="https://youtu.be/-6Aq5Q0c-CU">deephypebot</a>); <strong>Conferences</strong>: RenderATL (2023), ACL (2019), NSBE (2018), GHC (2016), Y Combinator FFC (2014).</li>
-            </ul>
+        <!-- Two-column layout for remaining sections -->
+
+        <div class="two-column">
+            <!-- Left column -->
+            <div>
+                <div class="section">
+                    <h2 class="section-title">Career Transitions & Engagement</h2>
+
+                    <div class="experience">
+                        <ul>
+                            <li><strong>Recurse Center</strong> (Nov 2024 &ndash; Feb 2025): Self-directed <a href="https://www.recurse.com/">programming retreat</a> in a peer-learning environment. Focused on web development, creative coding, and generative AI.</li>
+                            <li><strong>Family Sabbatical</strong> (Jul &ndash; Nov 2024): Dedicated time for parenting and early childhood development.</li>
+                            <li><strong>Presentations & Conferences</strong>: OpenAI Scholars Demo Day (2018, <a href="https://youtu.be/-6Aq5Q0c-CU">deephypebot</a>), RenderATL (2023), ACL (2019), NSBE (2018), GHC (2016), Y Combinator FFC (2014).</li>
+                            <li><strong>Internships</strong>: <a href="https://www.rd.ntt/e/cs/">NTT Communication Science Labs</a> (2012), Google BOLD (2011), Stanford Research (2010).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right column -->
+            <div>
+                <div class="section">
+                    <h2 class="section-title">Technical Skills</h2>
+
+                    <div class="experience">
+                        <ul>
+                            <li><strong>Languages & Frameworks:</strong> Python, PyTorch, PyTorch Lightning, Jupyter, TypeScript/JavaScript, SQL, Hugging Face Transformers.</li>
+                            <li><strong>ML & AI:</strong> NLP & NLU, Neural Networks, Large Language Models, Distributed Training, Fine-Tuning, Text Embeddings, Conversational AI, Multi-Agent Systems.</li>
+                            <li><strong>Infrastructure:</strong> Kubernetes, Ray, Cloud Computing (AWS), CI/CD Pipelines, Airflow, MLflow, Docker, Git.</li>
+                            <li><strong>Backend/API Development:</strong> aiohttp/asyncio servers, ML inference APIs, Microservices, gRPC/Protocol Buffers, REST, API Gateway patterns, horizontally scalable services.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
